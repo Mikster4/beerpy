@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import numpy as np
 import sqlite3
+import sys
 
 first_id = 1000
 
@@ -14,10 +15,11 @@ if len(sys.argv) == 3:
 
     id = first_id
     for s in students:
+        print(s)
         name, level, faction = s
         query = "(" + str(id) + ",\"" + name + "\",\"" + faction + "\"," + level + ")"
         c.execute("INSERT INTO users(id, name, faction, level) VALUES " + query)
         id += 1
 
-        conn.commit()
-        conn.close()
+conn.commit()
+conn.close()
