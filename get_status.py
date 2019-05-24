@@ -5,7 +5,7 @@ import sys
 import os
 
 if len(sys.argv) == 1:
-    print("Usage: get_status.py [ -Aup ] <database_name.db>")
+    print("Usage: get_status.py [-Aup] <database_name.db>")
 
 if os.path.exists(sys.argv[len(sys.argv)-1]):
     db_name = sys.argv[len(sys.argv)-1]
@@ -35,5 +35,7 @@ if os.path.exists(sys.argv[len(sys.argv)-1]):
             print("ID: " + str(name[0]) +", Produkt: " +str(name[1]) +", Pris: " + str(name[2]))
         c.close()
 
-conn.commit()
-conn.close()
+    conn.commit()
+    conn.close()
+else:
+    print("ERROR: Database not found.")
