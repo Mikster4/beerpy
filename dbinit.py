@@ -17,7 +17,7 @@ if len(sys.argv) == 2:
     c = conn.cursor()
 
     c.execute("CREATE TABLE users (id int, name text, faction text, level int)")
-    c.execute("CREATE TABLE units (id INTEGER PRIMARY KEY, product text, price int)")
+    c.execute("CREATE TABLE units (id INTEGER PRIMARY KEY, product text, price int, price_adj float)")
     c.execute("CREATE TABLE userunits (user_id int, unit_id int, dato datetime, qty int)")
 
     conn.commit()

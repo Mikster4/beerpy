@@ -29,10 +29,10 @@ if os.path.exists(sys.argv[len(sys.argv)-1]):
         c.close()
 
     elif sys.argv[len(sys.argv)-2] == "-p":
-        c.execute("SELECT units.id, units.product, units.price FROM units WHERE 1 ORDER BY units.product ASC")
+        c.execute("SELECT units.id, units.product, units.price, units.price_adj FROM units WHERE 1 ORDER BY units.product ASC")
         names = c.fetchall()
         for name in names:
-            print("ID: " + str(name[0]) +", Produkt: " +str(name[1]) +", Pris: " + str(name[2]))
+            print("ID: " + str(name[0]) +", Produkt: " +str(name[1]) +", Pris: " + str(name[2]) +", Beregnet pris: " + str(name[3]))
         c.close()
 
     conn.commit()

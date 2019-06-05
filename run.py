@@ -33,7 +33,7 @@ bartender_replies = ['Dit køb er godkendt',
                      'Du tør ikke bunde!',
                      'Jeg kan bunde hurtigere end dig.',
                      'Det er noteret, at du nu har større sandsyndlighed for at vinde ølpokalen.',
-                     'Tillykke! Du har vundet retten til at købe en øl mere! Kom igang!'
+                     'Tillykke! Du har vundet retten til at købe en øl mere! Kom igang!',
                      'Bund.']
 
 def grab_a_beer():
@@ -66,7 +66,7 @@ def grab_a_beer():
     if beer == nameID:
         print("\n" + name + ", homie, min ven, stive-lis, du er allerede logget ind.")
         beer = input("Prøv igen. Scan din drikkevare!\n")
-        
+
     # The person scanned is clearly retarded and does not deserve a beer
     if beer == nameID:
         print("\n\t"+name +", DNUR pls\n")
