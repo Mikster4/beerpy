@@ -3,6 +3,8 @@ Beercomputer in python
 
 https://soundcloud.com/b-ggild-1/asbjorn-boggild-drik-ol
 
+Warning: No files support danish letters
+
 ## add_øller.py
 
 ## add_users.py
