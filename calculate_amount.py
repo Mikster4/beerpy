@@ -73,8 +73,8 @@ def get_prices():
             UNIT_PT_COUNT[i] = input(str(UNITS[i][1]) + ": " + str(UNIT_PT_COUNT[i]) + " units. New count: ")
 
     if input("Are there any extra expenses that needs to be covered? [y]/n: ") == "y":
-        extra_expenses = int(input("How much? "))
-        total_units = int(sum(UNIT_ACC_COUNT))
+        extra_expenses = float(input("How much? "))
+        total_units = float(sum(UNIT_ACC_COUNT))
         offset = extra_expenses / total_units
 
     print("Based on inputs, the new prices are computed:")

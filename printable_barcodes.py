@@ -86,6 +86,6 @@ elif os.path.exists(sys.argv[len(sys.argv)-1]):
     F.close()
 
     os.system("pdflatex -interaction batchmode printable_barcodes.tex")
-    os.remove("printable_barcodes.tex")
+    #os.remove("printable_barcodes.tex")
     os.remove("printable_barcodes.aux")
     os.remove("printable_barcodes.log")

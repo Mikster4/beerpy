@@ -32,11 +32,11 @@ elif os.path.exists(sys.argv[len(sys.argv)-1]):
     os.chdir("PDF/")
     CODE128 = barcode.get_barcode_class('code128')
 
-    code128 = CODE128("0000",writer=ImageWriter())
     for u in units:
         code128 = CODE128(str(u[0]),writer=ImageWriter())
         code128.save(u[1])
 
+    code128 = CODE128("0000",writer=ImageWriter())
     code128.save("ANNULER")
     code128 = CODE128("9999",writer=ImageWriter())
     code128.save("LOGUD")
@@ -46,14 +46,14 @@ elif os.path.exists(sys.argv[len(sys.argv)-1]):
 
     workfile = "admins.tex"
     F = open(workfile,"a")
-    F.write("\\documentclass[a4paper,11pt]{article}")
-    F.write("\\usepackage{graphicx}")
-    F.write("\\usepackage[utf8]{inputenc}")
-    F.write("\\usepackage[T1]{fontenc}")
-    F.write("\\usepackage[danish]{babel}")
-    F.write("\\usepackage{array}")
-    F.write("\\usepackage{ragged2e}")
-    F.write("\\begin{document}")
+    F.write("\\documentclass[a4paper,11pt]{article}\n")
+    F.write("\\usepackage{graphicx}\n")
+    F.write("\\usepackage[utf8]{inputenc}\n")
+    F.write("\\usepackage[T1]{fontenc}\n")
+    F.write("\\usepackage[danish]{babel}\n")
+    F.write("\\usepackage{array}\n")
+    F.write("\\usepackage{ragged2e}\n")
+    F.write("\\begin{document}\n")
     for pic in pics:
         dot = pic.find(".")
         print (pic)
@@ -70,11 +70,11 @@ elif os.path.exists(sys.argv[len(sys.argv)-1]):
 
     F.write("\\end{document}")
     F.close()
-    
+
     dir = os.listdir(".")
 
     for item in dir:
-        if item.endswith(".png") or item.endswith(".aux") or item.endswith(".log"):
+        if item.endswith(".aux") or item.endswith(".log"):
             os.remove(item)
     os.chdir("../")
 else:

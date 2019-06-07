@@ -52,8 +52,14 @@ def grab_a_beer():
     # Person specific messages.
     if name == "Magnus Gilsborg":
         print("\n\tFückboi.\n")
-    if name == "Sebastian Lokmann":
-        print("\n\tSvagdrikker.\n")
+    if name == "Josephine Kim Nielsen":
+        name = "Kost"
+    if name == "Alex Jørgensen":
+        name = "G"
+    if name == "Marc Pedersen":
+        print("\tMarcP\tMarcP\tMarcP\n")
+        name = "fucknugget"
+
 
     beer = input("{0}\n".format(bartender_requests[random.randint(0, len(bartender_requests) - 1)]).replace("_", name))
 
