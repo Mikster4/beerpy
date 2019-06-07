@@ -1,5 +1,4 @@
 *.db
-*.csv
 barcodes/*
 PDF/*
 *.log
