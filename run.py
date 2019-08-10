@@ -15,7 +15,12 @@ greetings = ['Hvad så, hvem er du?',
              'Kæft du ser godt ud, hvad hedder du?',
              'Jeg var også ved at blive tørstig. Hvad må jeg kalde dig?',
              'Tørstig? Scan din stregkode.',
-             'BUND! Nåe nej, du skal lige købe noget først. Scan din stregkode.']
+             'BUND! Nåe nej, du skal lige købe noget først. Scan din stregkode.',
+             'Du har mødt en forfærdelig skæbne, har du ikke? Eller sådan ser du måske bare ud. Scan lige dit navn.',
+             'Hey smukke pige, kom ind i Mujaffas bar! Hvis du altså scanner din stregkode.',
+             'You must scan your name before venturing forth.',
+             'Hey smatso, nummer?',
+             'Yo homie, hvad kalder de dig på gaden?']
 
 bartender_requests = ['Velkommen til baren, _! Hvad skulle det være?',
                       'Hvad skulle det være?',
@@ -23,7 +28,9 @@ bartender_requests = ['Velkommen til baren, _! Hvad skulle det være?',
                       'Hvordan kan jeg hjælpe dig, _?',
                       '_, min ven!',
                       '_! _! Skål!',
-                      'Det er farligt derude, her, køb en bajs.']
+                      'Det er farligt derude, her, køb en bajs.',
+                      '_? Dig har jeg godt hørt rygter om.',
+                      '_ SKAL BUNDE, FOR DE ER EN... noget.']
 
 bartender_replies = ['Dit køb er godkendt',
                      'Nyd dine drikkevarer',
@@ -34,7 +41,14 @@ bartender_replies = ['Dit køb er godkendt',
                      'Jeg kan bunde hurtigere end dig.',
                      'Det er noteret, at du nu har større sandsyndlighed for at vinde ølpokalen.',
                      'Tillykke! Du har vundet retten til at købe en øl mere! Kom igang!',
-                     'Bund.']
+                     'Bund.',
+                     'Vi ses; jeg er her hele aftenen.',
+                     'Husk kun at gå ud til navlen, ellers kan du ikke bunde.',
+                     'Ok, jeg sætter det på din regning.',
+                     '1000 øl, værsgod. Ah, det er gas!',
+                     'Rygtet siger, at den der vinder natløbet ikke skal rydde op næste dag.',
+                     'Rygtet siger, at den 1000. øl udløser en præmie.',
+                     'Rygtet siger, at der findes en stregkode som drikker gratis.']
 
 def grab_a_beer():
     nameID = input("{0}\n".format(greetings[random.randint(0, len(greetings) - 1)]))
@@ -59,6 +73,8 @@ def grab_a_beer():
     if name == "Marc Pedersen":
         print("\tMarcP\tMarcP\tMarcP\n")
         name = "fucknugget"
+    if name == "Jens Kanstrup Larsen"
+        name = "Bønne"
 
 
     beer = input("{0}\n".format(bartender_requests[random.randint(0, len(bartender_requests) - 1)]).replace("_", name))
