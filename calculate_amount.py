@@ -89,7 +89,7 @@ def get_prices():
     for r in row:
         units_missing = (int(UNIT_OG_COUNT[id]) - int(UNIT_PT_COUNT[id]))
         units_not_acc = units_missing - int(UNIT_ACC_COUNT[id])
-        new_cost = round(UNIT_PRICE[id] * (units_missing / UNIT_ACC_COUNT[id]) + offset,2)
+        new_cost = round(float(UNIT_PRICE[id]) * (units_missing / UNIT_ACC_COUNT[id]) + float(offset),2)
         UNIT_PRICE_ADJ.append(new_cost)
         c.execute("UPDATE units SET price_adj = " + str(new_cost) + " WHERE units.product = " + "'" + r[0] + "'")
         conn.commit()

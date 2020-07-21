@@ -5,6 +5,7 @@ import numpy as np
 import sqlite3
 import os
 import glob, os, sys
+import shutil
 os.chdir("./")
 pics = []
 
@@ -39,7 +40,7 @@ elif os.path.exists(sys.argv[len(sys.argv)-1]):
     code128 = CODE128("0000",writer=ImageWriter())
     code128.save("ANNULER")
     code128 = CODE128("9999",writer=ImageWriter())
-    code128.save("LOGUD")
+    code128.save("GODKEND")
 
     for file in glob.glob("*.png"):
         pics.append(os.path.splitext(file)[0])

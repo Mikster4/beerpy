@@ -28,7 +28,6 @@ bartender_requests = ['Velkommen til baren, _! Hvad skulle det være?',
                       'Hvordan kan jeg hjælpe dig, _?',
                       '_, min ven!',
                       '_! _! Skål!',
-                      'Det er farligt derude, her, køb en bajs.',
                       '_? Dig har jeg godt hørt rygter om.',
                       '_ SKAL BUNDE, FOR DE ER EN... noget.']
 
